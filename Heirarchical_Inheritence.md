@@ -31,63 +31,35 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-class Details:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def getName(self):
-        return self.name
-
-    def getAge(self):
-        return self.age
-
-
-class Employee(Details):
-    def __init__(self, name, age, employee_id, department):
-        super().__init__(name, age)
-        self.employee_id = employee_id
-        self.department = department
-
-    def getEmployeeDetails(self):
-        print("Name:", self.getName())
-        print("Age:", self.getAge())
-        print("Employee ID:", self.employee_id)
-        print("Department:", self.department)
-
-
-class Patient(Details):
-    def __init__(self, name, age, patient_id, disease):
-        super().__init__(name, age)
-        self.patient_id = patient_id
-        self.disease = disease
-
-    def getPatientDetails(self):
-        print("Name:", self.getName())
-        print("Age:", self.getAge())
-        print("Patient ID:", self.patient_id)
-        print("Disease:", self.disease)
-
-
-ename = input("Enter employee name: ")
-eage = int(input("Enter employee age: "))
-eid = input("Enter employee ID: ")
-edept = input("Enter department: ")
-
-pname = input("Enter patient name: ")
-page = int(input("Enter patient age: "))
-pid = input("Enter patient ID: ")
-pdisease = input("Enter disease: ")
-
-emp = Employee(ename, eage, eid, edept)
-pat = Patient(pname, page, pid, pdisease)
-
-print("\nEmployee Details")
-emp.getEmployeeDetails()
-
-print("\nPatient Details")
-pat.getPatientDetails()
+~~~
+# Single inheritance in python
+#Base class
+class Details(object): 
+# Constructor 
+    def __init__(self, name, id): 
+        self.name = name 
+        self.id = id
+# To fetch employee details 
+    def Employee_Details(self): 
+        return self.id , self.name
+# derived class or the sub class
+class Patient_details(Employee_details): 
+    # To check if this  is a valid employee 
+    def Employee_check(self): 
+        if self.id > 500000:
+           return " Valid Employee "
+        else:
+           return " Invalid Employee "
+# Driver code 
+id=int(input())
+name=input()
+Employee1 = Patient_details( name , id)  # parent class object
+print( Employee1.Employee_Details() , Employee1.Employee_check() ) 
+~~~
 ## Sample Output
-<img width="1168" height="909" alt="image" src="https://github.com/user-attachments/assets/26c07040-e4ce-48e6-b3d4-51fbfe466cbe" />
-#result
-Hence the program is written and executed successfully.
+<img width="811" height="229" alt="image" src="https://github.com/user-attachments/assets/c7ce9114-9cc3-4586-a672-1f749b467d4d" />
+
+## Result
+Thus the output is verified.
+
+

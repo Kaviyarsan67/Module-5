@@ -21,23 +21,19 @@ The program defines a class `Demo` with:
    - Create an instance of the `Demo` class.
    - Delete the object using the `del` keyword.
 ## Program
-```
+~~~
 class Demo:
-    def __init__(self, value):
-        self.value = value 
-    def display(self):
-        print(f"The value of this instance is: {self.value}")
-
-
-demo_instance = Demo(10)
-
-print(demo_instance.value)  
-
-demo_instance.display()   
+    def __init__(self):
+        print ("Alive")
+    def __del__(self):
+        print("The object no longer exists")
+obj=Demo()
+~~~
 
 ## 🧪 Output
-<img width="994" height="865" alt="image" src="https://github.com/user-attachments/assets/78d069cf-b544-4fee-8722-11985ad89165" />
+<img width="595" height="163" alt="image" src="https://github.com/user-attachments/assets/45257350-6528-45f1-bd76-344cd37d6330" />
 
 
 ## Result
-hence the code is written and executed
+Thus the output is verified.
+
